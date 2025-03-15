@@ -21,10 +21,7 @@ Evaluation Metric
 ## Evaluation Metric
 The performance of the predictions is evaluated using the Weighted Mean Absolute Error (WMAE). The formula for WMAE is:
 
-$$
-\text{WMAE} = \frac{\sum_{i=1}^{n} w_i \times |y_i - \hat{y}_i|}{\sum_{i=1}^{n} w_i}
-$$
-
+$$\text{WMAE} = \frac{ \sum_{i=1}^{n} w_i \times |y_i - \hat{y}\_i|}{ \sum_{i=1}^{n} w_i}$$
 
 Where:
 
