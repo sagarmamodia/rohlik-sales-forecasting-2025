@@ -47,8 +47,8 @@ Our approach to forecasting involved the following steps:
     * Ensemble: Multiple ensembles of XGBoost model were trained and evaluated.
 * Validation Strategy: Due to computational constraints, a manual selection of validation periods was employed to simulate future sales scenarios.
 
-Results
+## Results
 
-    Best WMAE Achieved: 19.63
-    Leaderboard Rank: 164th out of 777 participants
-    Performance Comparison: Our WMAE was 1.8 points higher than the 4th place result in the competition.
+ Best Public WMAE Achieved: 20.573  
+ Best Private WMAE Achieved: 20.717    
+ Leaderboard Rank: 284th out of 777 participants
