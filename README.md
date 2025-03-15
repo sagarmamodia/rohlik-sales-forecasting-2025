@@ -25,8 +25,8 @@ $$\text{WMAE} = \frac{ \sum_{i=1}^{n} w_i \times |y_i - \hat{y}\_i|}{ \sum_{i=1}
 
 Where:
 
-* $nn$ is the number of predictions.
-* $w_i​$ is the weight for the ii-th prediction, provided in test_weights.csv.
+* $n$ is the number of predictions.
+* $w_i​$ is the weight for the i-th prediction, provided in test_weights.csv.
 * $\hat{y}\_i$​ is the actual sales value.
 * $y_i$ is the predicted sales value.
 
