@@ -26,9 +26,9 @@ $$\text{WMAE} = \frac{ \sum_{i=1}^{n} w_i \times |y_i - \hat{y}\_i|}{ \sum_{i=1}
 Where:
 
 * $nn$ is the number of predictions.
-* $wiwi​$ is the weight for the ii-th prediction, provided in test_weights.csv.
-* $yiyi$​ is the actual sales value.
-* $y^iy^​i​$ is the predicted sales value.
+* $w_i​$ is the weight for the ii-th prediction, provided in test_weights.csv.
+* $\hat{y}\_i$​ is the actual sales value.
+* $y_i$ is the predicted sales value.
 
 ## Methodology
 
