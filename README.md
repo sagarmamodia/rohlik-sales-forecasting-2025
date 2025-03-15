@@ -18,32 +18,34 @@ The solution.csv file contains our sales forecasts and adheres to the following 
 Note: The id is constructed by concatenating the unique_id and date with an underscore.
 Evaluation Metric
 
+## Evaluation Metric
 The performance of the predictions is evaluated using the Weighted Mean Absolute Error (WMAE). The formula for WMAE is:
 
-WMAE=∑i=1nwi×∣yi−y^i∣∑i=1nwiWMAE=∑i=1n​wi​∑i=1n​wi​×∣yi​−y^​i​∣​
+$$
+\text{WMAE} = \frac{\sum_{i=1}^{n} w_i \times |y_i - \hat{y}_i|}{\sum_{i=1}^{n} w_i}
+$$
+
 
 Where:
 
-    nn is the number of predictions.
-    wiwi​ is the weight for the ii-th prediction, provided in test_weights.csv.
-    yiyi​ is the actual sales value.
-    y^iy^​i​ is the predicted sales value.
+* $nn$ is the number of predictions.
+* $wiwi​$ is the weight for the ii-th prediction, provided in test_weights.csv.
+* $yiyi$​ is the actual sales value.
+* $y^iy^​i​$ is the predicted sales value.
 
-Methodology
+## Methodology
 
 Our approach to forecasting involved the following steps:
 
-    Data Preprocessing: Cleaning and preparing the data by handling missing values and merging datasets to enrich features.
-    Feature Engineering: Creating additional features such as:
-        Temporal features (e.g., day of the week, month).
-        Lag features to capture sales trends over time.
-        Encoding categorical variables like warehouse and product categories.
-    Model Selection: Evaluating various models, including:
-        XGBoost: Selected for its superior performance in capturing complex patterns in the data.
-        LightGBM: Considered but found to be less effective in this context.
-        Deep Neural Networks: Explored but required extensive computational resources without significant performance gains.
-    Validation Strategy: Due to computational constraints, a manual selection of validation periods was employed to simulate future sales scenarios.
-    Hyperparameter Tuning: Conducted extensive tuning to optimize model performance.
+* Data Preprocessing: Cleaning and preparing the data by handling missing values and merging datasets to enrich features.
+* Feature Engineering: Creating additional features such as:
+    * Temporal features (e.g., day of the week, month).
+    * Lag features to capture sales trends over time.
+    * Encoding categorical variables like warehouse and product categories.
+* Model Selection: Evaluating various models, including:
+    * XGBoost: Selected for its superior performance in capturing complex patterns in the data.
+    * Ensemble: Multiple ensembles of XGBoost model were trained and evaluated.
+* Validation Strategy: Due to computational constraints, a manual selection of validation periods was employed to simulate future sales scenarios.
 
 Results
 
